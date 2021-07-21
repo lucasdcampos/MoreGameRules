@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MoreGameRules:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MoreGameRules_jar</output-path>
+    <root id="archive" name="MoreGameRules.jar">
+      <element id="module-output" name="MoreGameRules" />
+    </root>
+  </artifact>
+</component>

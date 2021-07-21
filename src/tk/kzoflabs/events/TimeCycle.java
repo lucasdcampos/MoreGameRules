@@ -1,0 +1,1 @@
+//This will allow players to change the day duration (If you want do help doing this, open a pull request)

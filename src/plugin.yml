@@ -1,0 +1,11 @@
+name: MoreGameRules
+version: 1.0-SNAPSHOT
+main: tk.kzoflabs.Main
+author: lucazof
+commands:
+  moregamerules:
+    description: "MoreGameRules information"
+    aliases: ["mgr"]
+  moregamerules-reload:
+    description: "Reload config.yml"
+    aliases: ["mgr-r", "mgr-reload", "r-mgr", "reload-mgr", "moregamerules-r", "reload-moregamerules"]
