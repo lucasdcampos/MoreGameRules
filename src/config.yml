@@ -11,10 +11,13 @@ no-hunger: false
 # Make all items unbreakable
 unbreakable-items: false
 
-# Allows you to fly (Survival-Mode) - Coming Soon
-fly: false
+# Prevent players from breaking or placing blocks
+anti-modify-blocks: false
 
-# Prevent players from breaking blocks - Coming Soon
-blocks-breakable: false
+# Makes you invincible
+invincible: false
+
+# Allows you to fly (Coming Soon - If you know how to do it, please open a Pull Request)
+fly: false
 
 # End of the config file o:

@@ -9,3 +9,5 @@ commands:
   moregamerules-reload:
     description: "Reload config.yml"
     aliases: ["mgr-r", "mgr-reload", "r-mgr", "reload-mgr", "moregamerules-r", "reload-moregamerules"]
+    permission: "moregamerules.reload"
+    permission-message: "§cYou don't have permission!"
