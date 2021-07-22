@@ -22,7 +22,7 @@ public class MoreGameRules implements CommandExecutor, Listener {
                 if (args[0].equalsIgnoreCase("help")) {
                     sender.sendMessage("§a§lMoreGameRules");
                     sender.sendMessage("§7Commands:");
-                    sender.sendMessage("§b/gmr reload:§f Reload config.yml");
+                    sender.sendMessage("§b/mgr reload:§f Reload config.yml");
                     sender.sendMessage("§cGameRules in-game editor coming soon!");
                 }else{
                     if(args[0].equalsIgnoreCase("reload")){
