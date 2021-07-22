@@ -17,6 +17,9 @@ anti-modify-blocks: false
 # Makes you invincible
 invincible: false
 
+# Removes Join/Quit messages (Player joined the game)
+no-join-quit-messages: false
+
 # Allows you to fly (Coming Soon - If you know how to do it, please open a Pull Request)
 fly: false
 

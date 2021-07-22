@@ -1,4 +1,4 @@
-package tk.kzoflabs.commands;
+/*package tk.kzoflabs.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,3 +14,4 @@ public class Reload implements CommandExecutor {
         return true;
     }
 }
+*/

@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import tk.kzoflabs.commands.MoreGameRules;
-import tk.kzoflabs.commands.Reload;
 import tk.kzoflabs.events.*;
 
 public class Main extends JavaPlugin {
@@ -42,6 +41,5 @@ public class Main extends JavaPlugin {
 
     public void registerCommands(){
         getCommand("moregamerules").setExecutor(new MoreGameRules());
-        getCommand("moregamerules-reload").setExecutor(new Reload());
     }
 }

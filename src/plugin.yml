@@ -6,8 +6,5 @@ commands:
   moregamerules:
     description: "MoreGameRules information"
     aliases: ["mgr"]
-  moregamerules-reload:
-    description: "Reload config.yml"
-    aliases: ["mgr-r", "mgr-reload", "r-mgr", "reload-mgr", "moregamerules-r", "reload-moregamerules"]
-    permission: "moregamerules.reload"
+    permission: "moregamerules.admin"
     permission-message: "§cYou don't have permission!"
