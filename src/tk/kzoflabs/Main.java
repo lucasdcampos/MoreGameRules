@@ -1,22 +1,33 @@
 package tk.kzoflabs;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import tk.kzoflabs.commands.MoreGameRules;
 import tk.kzoflabs.events.*;
+
+import java.io.File;
 
 public class Main extends JavaPlugin {
 
 
     @Override
     public void onEnable() {
+
         saveDefaultConfig();
         registerEvents();
         registerCommands();
         Bukkit.getConsoleSender().sendMessage("§a[MoreGameRules]§f online!");
+
         instance = this;
                 getServer();
+
+        File configFile = new File(this.getDataFolder(), "config.yml");
+
+        if(configFile.exists()){
+
+        }
     }
 
     public void onDisable() {
@@ -37,6 +48,8 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new NoHunger(), this);
         Bukkit.getPluginManager().registerEvents(new TimeCycle(), this);
         Bukkit.getPluginManager().registerEvents(new UnbreakableItems(), this);
+
+
     }
 
     public void registerCommands(){

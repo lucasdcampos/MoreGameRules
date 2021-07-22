@@ -1,6 +1,6 @@
 # MoreGameRules configuration file
 # Developed by Kzof Labs (https://kzoflabs.tk)
-# Version: 1.0-SNAPSHOT
+# Version: 1.0
 
 # When you trample on Wheat for example it won't change to dirt
 anti-soil-trampling: false
@@ -20,7 +20,5 @@ invincible: false
 # Removes Join/Quit messages (Player joined the game)
 no-join-quit-messages: false
 
-# Allows you to fly (Coming Soon - If you know how to do it, please open a Pull Request)
-fly: false
 
 # End of the config file o:

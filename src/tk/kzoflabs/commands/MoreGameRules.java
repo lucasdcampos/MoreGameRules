@@ -1,11 +1,12 @@
 package tk.kzoflabs.commands;
-
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import tk.kzoflabs.Main;
+
+import java.io.File;
 
 public class MoreGameRules implements CommandExecutor, Listener {
 
@@ -25,9 +26,9 @@ public class MoreGameRules implements CommandExecutor, Listener {
                     sender.sendMessage("§cGameRules in-game editor coming soon!");
                 }else{
                     if(args[0].equalsIgnoreCase("reload")){
+                        Main.getInstance().saveDefaultConfig();
                         Main.getInstance().reloadConfig();
-                        sender.sendMessage("§a[MoreGameRules]§f successfully reloaded! :)");
-
+                            sender.sendMessage("§a[MoreGameRules]§f successfully reloaded! :)");
                     }
                 }
             }
