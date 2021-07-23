@@ -22,12 +22,6 @@ public class Main extends JavaPlugin {
 
         instance = this;
                 getServer();
-
-        File configFile = new File(this.getDataFolder(), "config.yml");
-
-        if(configFile.exists()){
-
-        }
     }
 
     public void onDisable() {
@@ -48,6 +42,7 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new NoHunger(), this);
         Bukkit.getPluginManager().registerEvents(new TimeCycle(), this);
         Bukkit.getPluginManager().registerEvents(new UnbreakableItems(), this);
+        Bukkit.getPluginManager().registerEvents(new EditorClick(), this);
 
 
     }

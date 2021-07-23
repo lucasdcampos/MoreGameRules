@@ -41,6 +41,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                 if(args[0].equalsIgnoreCase("menu")){
                     Player p = (Player)sender;
                     Inventory inv = Bukkit.createInventory(null, 3*9, "§8MoreGameRules - Editor");
+                    Main.getInstance().reloadConfig();
                     p.openInventory(inv);
                     //AntiJoinMessage item
                     ItemStack antijoinmessage = new ItemStack(Material.IRON_DOOR, 1);
