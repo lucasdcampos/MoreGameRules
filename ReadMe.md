@@ -9,6 +9,12 @@ Some examples are removing Hunger, making all items unbreakable or removing Farm
 
 ### Editing Game Rules
 You can edit the Game Rules in the "config.yml" on plugin folder, everything is self-explain, but if you need more help don't exite in asking.
+Or use our NEW FEATURE, the In-game Editor! *(Recommended)*
+
+Just type /mgr menu and will open the Editor, you can change the game rules with a few clicks, and it updates on config.yml in real time!
+
+![unknown (3)](https://user-images.githubusercontent.com/74553272/126854160-62ecfe68-653f-467c-9cd8-0aed3a6764a2.png)
+
 
 ### Need Help?
 If you need help we have a support discord server, you can join by [clicking here](https://discord.gg/TvZSbKbTHc). Or you can read our [Wiki](https://kzoflabs.tk/moregamerules/wiki) which explains how it works.
