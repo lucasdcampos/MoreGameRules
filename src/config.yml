@@ -1,6 +1,6 @@
 # MoreGameRules configuration file
 # Developed by Kzof Labs (https://kzoflabs.tk)
-# Version: 1.0
+# Version: 1.1
 
 # When you trample on Wheat for example it won't change to dirt
 anti-soil-trampling: false

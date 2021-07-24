@@ -8,6 +8,7 @@ import tk.kzoflabs.commands.MoreGameRules;
 import tk.kzoflabs.events.*;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 public class Main extends JavaPlugin {
 
@@ -22,7 +23,9 @@ public class Main extends JavaPlugin {
 
         instance = this;
                 getServer();
+
     }
+
 
     public void onDisable() {
         Bukkit.getConsoleSender().sendMessage("§c[MoreGameRules] §foffline!");

@@ -20,7 +20,7 @@ public class MoreGameRules implements CommandExecutor, Listener {
 public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
     if(args.length==0){
-        sender.sendMessage("§a§lMoreGameRules§f 1.0.0");
+        sender.sendMessage("§a§lMoreGameRules§f 1.1");
         sender.sendMessage("§7Made by: §fKzof Labs");
         sender.sendMessage("§7Help: §a/mgr§f help");
         sender.sendMessage("§7Reload: §a/mgr§f reload");
@@ -28,8 +28,9 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
         if (args[0].equalsIgnoreCase("help")) {
             sender.sendMessage("§a§lMoreGameRules");
             sender.sendMessage("§7Commands:");
+            sender.sendMessage("§b/mgr menu:§f GameRules Editor");
             sender.sendMessage("§b/mgr reload:§f Reload config.yml");
-            sender.sendMessage("§cGameRules in-game editor coming soon!");
+
         }else{
             if(args[0].equalsIgnoreCase("reload")){
                 Main.getInstance().saveDefaultConfig();
@@ -67,6 +68,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
 
 
 
+
                     //Unbreakable-Items item
                     ItemStack unbreakableitems = new ItemStack(Material.DIAMOND_PICKAXE, 1);
                     ItemMeta unbreakableitemsItemMeta = unbreakableitems.getItemMeta();
@@ -92,9 +94,9 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     //anti-modify-blocks item
                     ItemStack antimodifyblocks = new ItemStack(Material.BEDROCK, 1);
                     ItemMeta antimodifyblocksItemMeta = antimodifyblocks.getItemMeta();
-                    antimodifyblocksItemMeta.setDisplayName("§aModify Blocks");
+                    antimodifyblocksItemMeta.setDisplayName("§aAnti Modify Blocks");
                     ArrayList<String> antimodifyblockslore = new ArrayList<String>();
-                    antimodifyblockslore.add("§7Place and Break blocks:" + "§b " + Main.getInstance().getConfig().getBoolean("anti-modify-blocks"));
+                    antimodifyblockslore.add("§7Block Place and Break blocks:" + "§b " + Main.getInstance().getConfig().getBoolean("anti-modify-blocks"));
                     antimodifyblocksItemMeta.setLore(antimodifyblockslore);
                     antimodifyblocks.setItemMeta(antimodifyblocksItemMeta);
                     inv.setItem(14,antimodifyblocks);
