@@ -29,11 +29,12 @@ public class ModifyBlock implements Listener {
         if(Main.getInstance().getConfig().getBoolean("anti-modify-blocks"))
             if(Main.getInstance().getConfig().getBoolean("bypass-with-permission"))
                 if(p.hasPermission("moregamerules.build"));
-                else{
-                    e.setCancelled(true);
-                }else{
+                    else{
+                e.setCancelled(true);
+
+            }else{
                 e.setCancelled(true);
             }
-            e.setCancelled(true);
+
     }
 }
