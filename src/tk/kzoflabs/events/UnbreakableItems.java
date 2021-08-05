@@ -12,7 +12,7 @@ public class UnbreakableItems implements Listener {
     public void onItemDamage(PlayerItemDamageEvent e){
         Player p = e.getPlayer();
         if(Main.getInstance().getConfig().getBoolean("unbreakable-items"))
-            p.updateInventory();
             e.setCancelled(true);
+            p.updateInventory();
     }
 }

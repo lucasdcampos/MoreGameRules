@@ -13,6 +13,7 @@ unbreakable-items: false
 
 # Prevent players from breaking or placing blocks
 anti-modify-blocks: false
+bypass-with-permission: false #(If Player have permission moregamerules.build he will able to build)
 
 # Makes you invincible
 invincible: false

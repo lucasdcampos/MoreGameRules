@@ -32,7 +32,7 @@ public class EditorClick implements Listener {
                 Main.getInstance().reloadConfig();
                 p.updateInventory();
                 p.closeInventory();
-                p.sendMessage("§a[MoreGameRules] §7Join/Quit messages §cdisabled");
+                p.sendMessage("§a[MoreGameRules] §7Anti Join/Quit messages §cdisabled");
         }else{
             if(e.getCurrentItem().getType() == Material.IRON_DOOR && !Main.getInstance().getConfig().getBoolean("no-join-quit-messages")){
                 Main.getInstance().getConfig().set("no-join-quit-messages", true);
@@ -40,7 +40,7 @@ public class EditorClick implements Listener {
                 Main.getInstance().reloadConfig();
                 p.updateInventory();
                 p.closeInventory();
-                p.sendMessage("§a[MoreGameRules] §7Join/Quit messages §aenabled");
+                p.sendMessage("§a[MoreGameRules] §7Anti Join/Quit messages §aenabled");
             }
 
         }
@@ -119,6 +119,25 @@ public class EditorClick implements Listener {
                 p.updateInventory();
                 p.closeInventory();
                 p.sendMessage("§a[MoreGameRules] §7Anti Modify Blocks §aenabled");
+            }
+
+        }
+
+        if(e.getCurrentItem().getType() == Material.LEVER && Main.getInstance().getConfig().getBoolean("bypass-with-permission")){
+            Main.getInstance().getConfig().set("bypass-with-permission", false);
+            Main.getInstance().saveConfig();
+            Main.getInstance().reloadConfig();
+            p.updateInventory();
+            p.closeInventory();
+            p.sendMessage("§a[MoreGameRules] §7Players with permission §cmoregamerules.build§7 won't be able to Build");
+        }else{
+            if(e.getCurrentItem().getType() == Material.LEVER && !Main.getInstance().getConfig().getBoolean("bypass-with-permission")){
+                Main.getInstance().getConfig().set("bypass-with-permission", true);
+                Main.getInstance().saveConfig();
+                Main.getInstance().reloadConfig();
+                p.updateInventory();
+                p.closeInventory();
+                p.sendMessage("§a[MoreGameRules] §7Players with permission §cmoregamerules.build§7 will be able to Build");
             }
 
         }

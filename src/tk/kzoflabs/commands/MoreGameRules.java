@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
@@ -20,7 +21,7 @@ public class MoreGameRules implements CommandExecutor, Listener {
 public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
     if(args.length==0){
-        sender.sendMessage("§a§lMoreGameRules§f 1.1");
+        sender.sendMessage("§a§lMoreGameRules§f 1.2");
         sender.sendMessage("§7Made by: §fKzof Labs");
         sender.sendMessage("§7Help: §a/mgr§f help");
         sender.sendMessage("§7Reload: §a/mgr§f reload");
@@ -47,7 +48,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     //AntiJoinMessage item
                     ItemStack antijoinmessage = new ItemStack(Material.IRON_DOOR, 1);
                     ItemMeta antijoinmessageItemMeta = antijoinmessage.getItemMeta();
-                    antijoinmessageItemMeta.setDisplayName("§aJoin/Quit Messages");
+                    antijoinmessageItemMeta.setDisplayName("§aAnti Join/Quit Messages");
                     ArrayList<String> antijoinmessagelore = new ArrayList<String>();
                     antijoinmessagelore.add("§7Removes player join/quit message:" + "§b " + Main.getInstance().getConfig().getBoolean("no-join-quit-messages"));
                     antijoinmessageItemMeta.setLore(antijoinmessagelore);
@@ -100,6 +101,16 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     antimodifyblocksItemMeta.setLore(antimodifyblockslore);
                     antimodifyblocks.setItemMeta(antimodifyblocksItemMeta);
                     inv.setItem(14,antimodifyblocks);
+
+
+                    ItemStack antimodifyblocksbp = new ItemStack(Material.LEVER, 1);
+                    ItemMeta antimodifyblocksbpItemMeta = antimodifyblocksbp.getItemMeta();
+                    antimodifyblocksbpItemMeta.setDisplayName("§aBypass With permission");
+                    ArrayList<String> antimodifyblocksbplore = new ArrayList<String>();
+                    antimodifyblocksbplore.add("§7Bypass Game Rule with permission:" + "§b " + Main.getInstance().getConfig().getBoolean("bypass-with-permission"));
+                    antimodifyblocksbpItemMeta.setLore(antimodifyblocksbplore);
+                    antimodifyblocksbp.setItemMeta(antimodifyblocksbpItemMeta);
+                    inv.setItem(23,antimodifyblocksbp);
 
 
                     //invincible
