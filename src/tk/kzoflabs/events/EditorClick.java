@@ -161,6 +161,26 @@ public class EditorClick implements Listener {
 
         }
 
+
+        if(e.getCurrentItem().getType() == Material.MOB_SPAWNER && Main.getInstance().getConfig().getBoolean("only-mob-spawners")){
+            Main.getInstance().getConfig().set("only-mob-spawners", false);
+            Main.getInstance().saveConfig();
+            Main.getInstance().reloadConfig();
+            p.updateInventory();
+            p.closeInventory();
+            p.sendMessage("§a[MoreGameRules] §7Only Mob Spawners §cdisabled");
+        }else{
+            if(e.getCurrentItem().getType() == Material.MOB_SPAWNER && !Main.getInstance().getConfig().getBoolean("only-mob-spawners")){
+                Main.getInstance().getConfig().set("only-mob-spawners", true);
+                Main.getInstance().saveConfig();
+                Main.getInstance().reloadConfig();
+                p.updateInventory();
+                p.closeInventory();
+                p.sendMessage("§a[MoreGameRules] §7Only Mob Spawners §aenabled");
+            }
+
+        }
+
         if(e.getCurrentItem().getType() == Material.EMERALD_BLOCK){
             Main.getInstance().saveConfig();
             Main.getInstance().reloadConfig();

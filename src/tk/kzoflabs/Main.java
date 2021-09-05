@@ -43,9 +43,9 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new Invincible(), this);
         Bukkit.getPluginManager().registerEvents(new ModifyBlock(), this);
         Bukkit.getPluginManager().registerEvents(new NoHunger(), this);
-        Bukkit.getPluginManager().registerEvents(new TimeCycle(), this);
         Bukkit.getPluginManager().registerEvents(new UnbreakableItems(), this);
         Bukkit.getPluginManager().registerEvents(new EditorClick(), this);
+        Bukkit.getPluginManager().registerEvents(new OnlyMobSpawners(), this);
 
 
     }

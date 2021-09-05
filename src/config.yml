@@ -1,25 +1,20 @@
 # MoreGameRules configuration file
-# Developed by Kzof Labs (https://kzoflabs.tk)
-# Version: 1.1
+# Developed by lucasof (https://kzoflabs.tk)
+# Version: 1.3
 
-# When you trample on Wheat for example it won't change to dirt
 anti-soil-trampling: false
 
-# Removes Hunger
 no-hunger: false
 
-# Make all items unbreakable
 unbreakable-items: false
 
-# Prevent players from breaking or placing blocks
 anti-modify-blocks: false
-bypass-with-permission: false #(If Player have permission moregamerules.build he will able to build)
+bypass-with-permission: false
 
-# Makes you invincible
 invincible: false
 
-# Removes Join/Quit messages (Player joined the game)
+
 no-join-quit-messages: false
 
-
-# End of the config file o:
+only-mob-spawners: false
+nature-spawn-on-world:

@@ -21,8 +21,8 @@ public class MoreGameRules implements CommandExecutor, Listener {
 public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
     if(args.length==0){
-        sender.sendMessage("§a§lMoreGameRules§f 1.2");
-        sender.sendMessage("§7Made by: §fKzof Labs");
+        sender.sendMessage("§a§lMoreGameRules§f 1.3");
+        sender.sendMessage("§7Made by: §flucasof");
         sender.sendMessage("§7Help: §a/mgr§f help");
         sender.sendMessage("§7Reload: §a/mgr§f reload");
     }else {
@@ -53,7 +53,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     antijoinmessagelore.add("§7Removes player join/quit message:" + "§b " + Main.getInstance().getConfig().getBoolean("no-join-quit-messages"));
                     antijoinmessageItemMeta.setLore(antijoinmessagelore);
                     antijoinmessage.setItemMeta(antijoinmessageItemMeta);
-                    inv.setItem(10,antijoinmessage);
+                    inv.setItem(9,antijoinmessage);
 
 
 
@@ -65,7 +65,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     nohungerlore.add("§7Removes Hunger:" + "§b " + Main.getInstance().getConfig().getBoolean("no-hunger"));
                     nohungerItemMeta.setLore(nohungerlore);
                     nohunger.setItemMeta(nohungerItemMeta);
-                    inv.setItem(11,nohunger);
+                    inv.setItem(10,nohunger);
 
 
 
@@ -78,7 +78,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     unbreakableitemslore.add("§7Makes all items unbreakable:" + "§b " + Main.getInstance().getConfig().getBoolean("unbreakable-items"));
                     unbreakableitemsItemMeta.setLore(unbreakableitemslore);
                     unbreakableitems.setItemMeta(unbreakableitemsItemMeta);
-                    inv.setItem(12,unbreakableitems);
+                    inv.setItem(11,unbreakableitems);
 
 
                     //anti-soil-trampling item
@@ -89,7 +89,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     antisoiltramplinglore.add("§7Anti Soil Trampling:" + "§b " + Main.getInstance().getConfig().getBoolean("anti-soil-trampling"));
                     antisoiltramplingItemMeta.setLore(antisoiltramplinglore);
                     antisoiltrampling.setItemMeta(antisoiltramplingItemMeta);
-                    inv.setItem(13,antisoiltrampling);
+                    inv.setItem(12,antisoiltrampling);
 
 
                     //anti-modify-blocks item
@@ -100,7 +100,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     antimodifyblockslore.add("§7Block Place and Break blocks:" + "§b " + Main.getInstance().getConfig().getBoolean("anti-modify-blocks"));
                     antimodifyblocksItemMeta.setLore(antimodifyblockslore);
                     antimodifyblocks.setItemMeta(antimodifyblocksItemMeta);
-                    inv.setItem(14,antimodifyblocks);
+                    inv.setItem(13,antimodifyblocks);
 
 
                     ItemStack antimodifyblocksbp = new ItemStack(Material.LEVER, 1);
@@ -110,7 +110,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     antimodifyblocksbplore.add("§7Bypass Game Rule with permission:" + "§b " + Main.getInstance().getConfig().getBoolean("bypass-with-permission"));
                     antimodifyblocksbpItemMeta.setLore(antimodifyblocksbplore);
                     antimodifyblocksbp.setItemMeta(antimodifyblocksbpItemMeta);
-                    inv.setItem(23,antimodifyblocksbp);
+                    inv.setItem(22,antimodifyblocksbp);
 
 
                     //invincible
@@ -121,7 +121,19 @@ public boolean onCommand(CommandSender sender, Command cmd, String alias, String
                     invinciblelore.add("§7Makes you invincible. Allowed:" + "§b " + Main.getInstance().getConfig().getBoolean("invincible"));
                     invincibleItemMeta.setLore(invinciblelore);
                     invincible.setItemMeta(invincibleItemMeta);
-                    inv.setItem(15,invincible);
+                    inv.setItem(14,invincible);
+
+
+
+                    //onlyspawners
+                    ItemStack onlyspawners = new ItemStack(Material.MOB_SPAWNER, 1);
+                    ItemMeta onlyspawnersItemMeta = onlyspawners.getItemMeta();
+                    onlyspawnersItemMeta.setDisplayName("§aOnly Spawners");
+                    ArrayList<String> onlyspawnerslore = new ArrayList<String>();
+                    onlyspawnerslore.add("§7Only Mobs from Spawners will Spawn:" + "§b " + Main.getInstance().getConfig().getBoolean("only-mob-spawners"));
+                    onlyspawnersItemMeta.setLore(onlyspawnerslore);
+                    onlyspawners.setItemMeta(onlyspawnersItemMeta);
+                    inv.setItem(15,onlyspawners);
 
                     ItemStack background = new ItemStack(Material.STAINED_GLASS_PANE);
 
