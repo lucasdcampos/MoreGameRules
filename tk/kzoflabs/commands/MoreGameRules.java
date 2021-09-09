@@ -21,7 +21,7 @@ public class MoreGameRules implements CommandExecutor, Listener {
 public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
     if(args.length==0){
-        sender.sendMessage("§a§lMoreGameRules§f 1.3");
+        sender.sendMessage("§a§lMoreGameRules§f v1.3.1");
         sender.sendMessage("§7Made by: §flucasof");
         sender.sendMessage("§7Help: §a/mgr§f help");
         sender.sendMessage("§7Reload: §a/mgr§f reload");

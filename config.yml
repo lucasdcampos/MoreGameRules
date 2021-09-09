@@ -1,6 +1,5 @@
 # MoreGameRules configuration file
 # Developed by lucasof (https://kzoflabs.tk)
-# Version: 1.3
 
 anti-soil-trampling: false
 
@@ -17,4 +16,4 @@ invincible: false
 no-join-quit-messages: false
 
 only-mob-spawners: false
-nature-spawn-on-world:
+nature-spawn-on-world: "insert-world-name-here"

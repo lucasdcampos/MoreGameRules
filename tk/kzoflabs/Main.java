@@ -1,6 +1,7 @@
 package tk.kzoflabs;
 
 import org.bukkit.Bukkit;
+import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,11 +19,10 @@ public class Main extends JavaPlugin {
 
         saveDefaultConfig();
         registerEvents();
-        registerCommands();
         Bukkit.getConsoleSender().sendMessage("§a[MoreGameRules]§f online!");
+        Bukkit.getPluginCommand("moregamerules").setExecutor(new MoreGameRules());
 
-        instance = this;
-                getServer();
+        getServer();
 
     }
 
@@ -34,10 +34,12 @@ public class Main extends JavaPlugin {
 
     private static Main instance;
 
-    public static Main getInstance() { return instance; }
+    public static Main getInstance() {
+        return instance;
+    }
 
 
-    public void registerEvents(){
+    public void registerEvents() {
         Bukkit.getPluginManager().registerEvents(new AntiTrample(), this);
         Bukkit.getPluginManager().registerEvents(new CustomJoinMessage(), this);
         Bukkit.getPluginManager().registerEvents(new Invincible(), this);
@@ -50,7 +52,6 @@ public class Main extends JavaPlugin {
 
     }
 
-    public void registerCommands(){
-        getCommand("moregamerules").setExecutor(new MoreGameRules());
-    }
+
 }
+
